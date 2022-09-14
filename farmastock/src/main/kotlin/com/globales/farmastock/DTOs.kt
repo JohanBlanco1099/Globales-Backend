@@ -80,13 +80,13 @@ data class ReminderInput(
         var description: String? = null,
         var status: Boolean? = null,
         var user: User? = null,
-        var reminder: Reminder? = null
+        var medicine: Medicine? = null
 )
 data class ReminderDetails(
         var create_date: Date? = null, // Date(year: Int, month: Int, day: Int, hour: Int, minute: Int)
         var description: String? = null,
         var user: User? = null,
-        var reminder: Reminder? = null
+        var medicine: Medicine? = null
 )
 
 

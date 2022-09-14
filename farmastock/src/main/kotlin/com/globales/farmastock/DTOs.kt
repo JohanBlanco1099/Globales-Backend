@@ -47,9 +47,8 @@ data class UserResult(
     var tokenExpired: Boolean? = null,
     var createDate: Date? = null,
     var roleList: List<RoleDetails>?=null,
-    var reminderList: List<ReminderDetails>?=null,
+    var reminderList: List<ReminderDetailsClean>?=null,
 )
-
 data class UserDetails(
     var id: Long? = null,
     var firstName: String? = null,
@@ -60,7 +59,6 @@ data class UserDetails(
     var tokenExpired: Boolean? = null,
     var createDate: Date? = null
 )
-
 data class UserLoginInput(
     var username: String = "",
     var password: String = "",
@@ -77,29 +75,36 @@ data class MedicineInput(
     var name: String? = null,
     var dose: Int? = null,
     var quantity: Int? = null,
-    var reminderList: List<ReminderDetails>?=null
+    //var reminderList: List<ReminderDetails>?=null
 )
 data class MedicineDetails(
     var id: Long? = null,
     var name: String? = null,
     var dose: Int? = null,
     var quantity: Int? = null,
-    var reminderList: List<ReminderDetails>?=null,
+    //var reminderList: List<ReminderDetails>?=null,
 )
 
 data class ReminderInput(
-        var id: Long? = null,
-        var create_date: Date? = null, // Date(year: Int, month: Int, day: Int, hour: Int, minute: Int)
-        var description: String? = null,
-        var status: Boolean? = null,
-        var user: User? = null,
-        var medicine: Medicine? = null
+    var id: Long? = null,
+    var createDate: Date? = null, // Date(year: Int, month: Int, day: Int, hour: Int, minute: Int)
+    var description: String? = null,
+    var state: Boolean? = null,
+    var user: UserResult? = null,
+    var medicine: MedicineDetails? = null
 )
 data class ReminderDetails(
-        var create_date: Date? = null, // Date(year: Int, month: Int, day: Int, hour: Int, minute: Int)
-        var description: String? = null,
-        var user: User? = null,
-        var medicine: Medicine? = null
+    var create_date: Date? = null, // Date(year: Int, month: Int, day: Int, hour: Int, minute: Int)
+    var description: String? = null,
+    var user: UserResult? = null,
+    var medicine: MedicineDetails? = null
+)
+
+data class ReminderDetailsClean(
+    var id: Long? = null,
+    var state: Boolean? = null,
+    var createDate: Date? = null, // Date(year: Int, month: Int, day: Int, hour: Int, minute: Int)
+    var description: String? = null,
 )
 
 

@@ -50,6 +50,17 @@ data class UserResult(
     var reminderList: List<ReminderDetails>?=null,
 )
 
+data class UserDetails(
+    var id: Long? = null,
+    var firstName: String? = null,
+    var lastName: String? = null,
+    var email: String? = null,
+    var password: String? = null,
+    var enabled: Boolean? = null,
+    var tokenExpired: Boolean? = null,
+    var createDate: Date? = null
+)
+
 data class UserLoginInput(
     var username: String = "",
     var password: String = "",
@@ -65,13 +76,15 @@ data class MedicineInput(
     var id: Long? = null,
     var name: String? = null,
     var dose: Int? = null,
-    var quantity: Int? = null
+    var quantity: Int? = null,
+    var reminderList: List<ReminderDetails>?=null
 )
 data class MedicineDetails(
     var id: Long? = null,
     var name: String? = null,
     var dose: Int? = null,
-    var quantity: Int? = null
+    var quantity: Int? = null,
+    var reminderList: List<ReminderDetails>?=null,
 )
 
 data class ReminderInput(

@@ -82,6 +82,7 @@ data class MedicineDetails(
     var name: String? = null,
     var dose: Int? = null,
     var quantity: Int? = null,
+    var reminderList: List<ReminderDetailsClean>?=null,
     //var reminderList: List<ReminderDetails>?=null,
 )
 
@@ -94,7 +95,7 @@ data class ReminderInput(
     var medicine: MedicineDetails? = null
 )
 data class ReminderDetails(
-    var create_date: Date? = null, // Date(year: Int, month: Int, day: Int, hour: Int, minute: Int)
+    var createDate: Date? = null, // Date(year: Int, month: Int, day: Int, hour: Int, minute: Int)
     var description: String? = null,
     var user: UserResult? = null,
     var medicine: MedicineDetails? = null

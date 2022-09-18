@@ -37,9 +37,9 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("io.jsonwebtoken:jjwt:0.9.1")
 	// Security Layer
-//	implementation("org.springframework.boot:spring-boot-starter-security")
-//	implementation("io.jsonwebtoken:jjwt:0.9.1")
-//	testImplementation("org.springframework.security:spring-security-test")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("io.jsonwebtoken:jjwt:0.9.1")
+	testImplementation("org.springframework.security:spring-security-test")
 }
 
 tasks.withType<KotlinCompile> {

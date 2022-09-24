@@ -8,6 +8,7 @@ data class PrivilegeInput(
     var name: String? = null,
 )
 
+
 data class PrivilegeDetails(
     var id: Long? = null,
     var name: String? = null,
